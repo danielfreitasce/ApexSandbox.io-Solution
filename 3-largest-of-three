@@ -1,7 +1,7 @@
 public static Integer findLargest(Integer num1, Integer num2, Integer num3) {
 	
     Integer maxInt = Math.max(num1, num2);
-    maxInt = (maxInt, num3);
+    maxInt = Math.max(maxInt, num3);
 
     return maxInt; 
 }
