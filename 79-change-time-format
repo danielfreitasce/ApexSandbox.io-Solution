@@ -7,16 +7,17 @@ public String changeTimeFormat(String strTime) {
         
         Integer hour = Integer.valueOf(hourParts[0]);
 
+        zeroBefore = '';
+        moment = 'PM'; 
         if(hour >12){
             hour -= 12;
-            time12Hour = '0'+String.valueOf(hour)+':'+hourParts[1]+ ' PM'; 
         }
-        else if(hour == 12){
-            time12Hour = '0'+String.valueOf(hour)+':'+hourParts[1]+ ' PM'; 
+        else if(hour > 0 && hour<12){
+            zeroBefore = '0';
+            moment = 'PM'; 
         }
-        else if(hour<12){
-            time12Hour = '0'+String.valueOf(hour)+':'+hourParts[1]+ ' AM'; 
-        }
+
+        time12Hour = zeroBefore+String.valueOf(hour)+':'+hourParts[1]+' '+moment; 
     }
 
     return time12Hour; 
