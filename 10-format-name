@@ -1,0 +1,13 @@
+public String formatName(String firstName, String lastName) {
+    if(String.isNotBlank(firstName) && String.isNotBlank(lastName)){
+        return lastName+','+' '+firstName; 
+    }
+    else if(String.isNotBlank(firstName)){
+        return firstName; 
+    }
+    else if( String.isNotBlank(lastName)){
+        return lastName
+    }
+
+    return '';
+}
