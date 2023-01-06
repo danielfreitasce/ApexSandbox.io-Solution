@@ -1,0 +1,20 @@
+public String changeTimeFormat(String strTime) {
+    String time12Hour = ''; 
+
+    if(String.isNotBlank(strTime)){
+        
+        String[] hourParts = strTime.split(':'); 
+        
+        Integer hour = Integer.valueOf(hourParts[0]);
+
+        if(hour > 12){
+            hour -= 12;
+            time12Hour = String.valueOf(hour)+':'+hourParts[1]+ ' PM'; 
+        }
+        else if(hour<=12){
+            time12Hour = String.valueOf(hour)+':'+hourParts[1]+ ' AM'; 
+        }
+    }
+
+    return time12Hour; 
+}
