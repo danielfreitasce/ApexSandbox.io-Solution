@@ -17,7 +17,7 @@ public String changeTimeFormat(String strTime) {
             moment = 'AM'; 
         }
         else if(hour == 0){
-
+            return time12Hour = 12+':'+hourParts[1]+' '+AM; 
         }
 
         time12Hour = zeroBefore+String.valueOf(hour)+':'+hourParts[1]+' '+moment; 
