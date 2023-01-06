@@ -7,8 +7,11 @@ public String changeTimeFormat(String strTime) {
         
         Integer hour = Integer.valueOf(hourParts[0]);
 
-        if(hour >= 12){
+        if(hour >12){
             hour -= 12;
+            time12Hour = '0'+String.valueOf(hour)+':'+hourParts[1]+ ' PM'; 
+        }
+        else if(hour == 12){
             time12Hour = '0'+String.valueOf(hour)+':'+hourParts[1]+ ' PM'; 
         }
         else if(hour<12){
