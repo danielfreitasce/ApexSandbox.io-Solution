@@ -9,8 +9,10 @@ public String changeTimeFormat(String strTime) {
 
         String zeroBefore = '';
         String moment = 'PM'; 
+        
         if(hour >12){
             hour -= 12;
+            if(hour < 10) zeroBefore = '0';
         }
         else if(hour > 0 && hour<12){
             zeroBefore = '0';
