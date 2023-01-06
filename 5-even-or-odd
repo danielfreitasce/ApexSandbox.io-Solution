@@ -1,9 +1,12 @@
 public String evenOrOdd(Integer num) {
-    
+    String isEvenOrOdd = '';
+
     if(Math.mod(num, 2) == 0){
-        return 'even';
+        isEvenOrOdd = 'even';
     }
     else if(Math.mod(num,2) != 0){
-        return 'odd';
+        isEvenOrOdd =  'odd';
     }
+
+    return isEvenOrOdd; 
 }
