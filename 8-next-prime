@@ -1,5 +1,5 @@
 public Integer nextPrime(Integer num) {
-    
+            //5
     Integer nextPrimeNum = num+1; 
     Boolean isNotPrime = false; 
 
