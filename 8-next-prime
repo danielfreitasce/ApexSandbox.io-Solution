@@ -1,6 +1,7 @@
 public Integer nextPrime(Integer num) {
 
     if(num < 1) num = 1; //Se for menor que zero, iguala a 1 para encontrar o número primo mais próximo.
+    
     Integer nextPrimeNum = num+1; 
     Boolean isNotPrime = false; 
 
