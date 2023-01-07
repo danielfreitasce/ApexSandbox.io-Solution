@@ -13,8 +13,6 @@ public Integer nextPrime(Integer num) {
     if(isNotPrime){
         nextPrime(nextPrimeNum);
     }
-    else{
-        return nextPrimeNum; 
-    }
-    return 0; 
+
+    return nextPrimeNum; 
 }
