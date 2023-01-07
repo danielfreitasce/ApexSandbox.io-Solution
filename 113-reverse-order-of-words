@@ -1,12 +1,17 @@
 public String reverseWordsInASentence(String sentence){
-    List<String> splitedSentence = sentence.split(' '); 
-	String newSentence = '';     
+    String newSentence;   
         
-    Integer size = splitedSentence.size();
+    if(String.isNotBlank(sentence)){
+        List<String> splitedSentence = sentence.split(' '); 
+
+        Integer size = splitedSentence.size();
+            
+        for(Integer i = size-1; i >= 0; i--) {
+            newSentence += splitedSentence[i]+' ';
+        }
         
-    for(Integer i = size-1; i >= 0; i--) {
-		newSentence += splitedSentence[i]+' ';
+        newSentence = newSentence.removeEnd(' ');
     }
-	newSentence = newSentence.removeEnd(' ');
+        
     return newSentence;
 }
