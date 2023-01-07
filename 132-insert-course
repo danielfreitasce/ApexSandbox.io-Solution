@@ -5,7 +5,7 @@ public Id insertCourse(String name, String details, Integer credits) {
     if(credits >=1 && credits <=4){
         course.Name = name;
         course.apxio__Course_Details__c = details;
-        course.apxio__Credits__c = credits;
+        course.apxio__Credits__c = String.valueOf(credits);
     }
     else{
         return null; 
