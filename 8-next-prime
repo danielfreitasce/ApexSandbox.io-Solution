@@ -3,7 +3,7 @@ public Integer nextPrime(Integer num) {
     Integer nextPrimeNum = num+1; 
     Boolean isNotPrime = false; 
 
-    for(Integer i = 2; i <= nextPrimeNum-1; i++){
+    for(Integer i = 2; i <= nextPrimeNum; i++){
         if(Math.mod(nextPrimeNum, i) == 0){
             isNotPrime = true;
             break;
