@@ -1,10 +1,12 @@
 public void enrollStudents(List<String> emails, String className) {
     
-    List<apxio__Class__c> courseClass = [SELECT Id FROM apxio__Class__c WHERE Name =:className];
+    List<apxio__Class__c> courseClass = [SELECT Id 
+                                         FROM apxio__Class__c 
+                                         WHERE Name =:className];
 
     List<apxio__Student__c> studentsList = [SELECT Id 
-                                           FROM apxio__Student__c 
-                                           WHERE apxio__Email__c IN emails];
+                                            FROM apxio__Student__c 
+                                            WHERE apxio__Email__c IN :emails];
     
     List<apxio__Class_Enrollment__c> enrollmentList = new List<apxio__Class_Enrollment__c>(); 
 
