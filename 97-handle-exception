@@ -3,11 +3,12 @@ public String divide(Integer a, Integer b){
     Integer division = 0; 
     try{
         if(b == 0) return 'Divide by 0';
-
         division = a/b; 
-        return Integer.valueOf(division);
-
-    }catch(Expection e){
-        return e.getMessage()
+    }catch(NullPointerException npe){
+        return npe.getMessage();
+    }catch(Exception e){
+        return e.getMessage(); 
     }
+
+    return Integer.valueOf(division);
 }
