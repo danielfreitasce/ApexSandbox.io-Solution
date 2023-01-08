@@ -6,7 +6,8 @@ public Id classFromCourse(String courseName) {
     if(course == null) return null; 
 
     apxio__Class__c newClass = new apxio__Class__c(
-        Name = courseName
+        Name = courseName,
+        apxio__Course__c = course.Id
     );
 
     insert newClass;
