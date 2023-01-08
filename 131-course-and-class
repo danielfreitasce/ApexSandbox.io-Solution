@@ -1,23 +1,21 @@
 public void createCourseAndClass(String name, String description) {
     
     if(String.isBlank(name)) return;
-    description = description !=null ? description : '';
-    
+    description = String.isBlank(description) ? '' : description; 
+
     apxio__Course__c course = new apxio__Course__c();
     course.Name = name,
     course.apxio__Course_Details__c = description;
 
     insert course; 
 
-    if(course.Id != null){
-        description = description.substring(0, 255);
+    if(course.Id == null) return; 
+ 
+    apxio__Class__c newClass = new apxio__Class__c(
+        apxio__Course__c = course.Id, 
+        Name = name,
+        apxio__Description__c = description
+    );
 
-        apxio__Class__c newClass = new apxio__Class__c(
-            apxio__Course__c = course.Id, 
-            Name = name,
-            apxio__Description__c = description
-        );
-
-        insert newClass; 
-    }
+    insert newClass;
 }
