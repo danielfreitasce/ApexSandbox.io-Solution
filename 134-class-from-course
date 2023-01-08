@@ -3,7 +3,7 @@ public Id classFromCourse(String courseName) {
     if(String.isBlank(courseName)) return null; 
 
     apxio__Course__c course = [SELECT Id FROM apxio__Course__c WHERE Name = :courseName];
-    if (course.size() < 1) return null;
+    if (course.isEmpty()) return null;
 
     apxio__Class__c newClass = new apxio__Class__c(
         Name = courseName,
