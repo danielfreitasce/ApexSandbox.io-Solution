@@ -1,6 +1,6 @@
 public void createCourseAndClass(String name, String description) {
     
-    if(String.isBlank(name) || String.isBlank(description)) return;
+    if(String.isBlank(name)) return;
 
     apxio__Course__c course = new apxio__Course__c(
         Name = name,
