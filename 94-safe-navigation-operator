@@ -3,4 +3,6 @@ public String getAccountBillingCityWithSafeNavigation(List<Account> accounts){
    for(Integer i = 0; i<accounts.size(); i++){
      return accounts[i]?.BillingCity?.toUpperCase(); 
    }
+
+   return null;
 }
