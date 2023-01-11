@@ -1,0 +1,18 @@
+public List<Account> checkAccounts(List<Account> accounts)
+{
+    if(accounts == null || accounts.isEmpty()){
+        throw new IllegalArgumentException('accounts should not be null');
+    }
+    for(Account acc: accounts){
+
+        if(String.isBlank(acc.BillingCity)){
+            throw new AccountException();
+        }
+
+    }
+
+    return accounts;
+}
+
+//do not remove the following custom-defined exception
+public class AccountException extends Exception {}
