@@ -5,9 +5,13 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
     if(accounts?.isEmpty() && contacts?.isEmpty()){
         return sObjectList;
     } 
-
-    sObjectList.add((List<SObject>) accounts);
-    sObjectList.add((List<SObject>) contacts);
-
+    
+    if(accounts != null){
+        sObjectList.addAll(accounts);
+    }
+    if(contacts !=null){
+        sObjectList.addAll(contacts);
+    }
+    
     return sObjectList; 
 }
