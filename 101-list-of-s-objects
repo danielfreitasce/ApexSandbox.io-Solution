@@ -6,8 +6,8 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
         return sObjectList;
     } 
 
-    sObjectList.add(accounts);
-    sObjectList.add(contacts);
-    
+    sObjectList.add((List<SObject>) accounts);
+    sObjectList.add((List<SObject>) contacts);
+
     return sObjectList; 
 }
