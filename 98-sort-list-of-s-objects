@@ -5,8 +5,14 @@ public List<Account> getAccounts(List<Account> accounts) {
     for(Account acc : accounts){
         accWrapperList.add(new AccountWrapper(acc));
     }
+    
     accWrapperList.sort(); 
-    return (List<Account>) accWrapperList; 
+    
+    for(Integer i = 0; i < accWrapperList.size(); i++){
+        accounts[i] = accWrapperList[i];
+    }
+    
+    return accounts
 }
 
 // write extra class here 
