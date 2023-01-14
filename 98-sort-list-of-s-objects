@@ -6,7 +6,7 @@ public List<Account> getAccounts(List<Account> accounts) {
         accWrapperList.add(new AccountWrapper(acc));
     }
     accWrapperList.sort(); 
-    return accWrapperList; 
+    return (List<Account>) accWrapperList; 
 }
 
 // write extra class here 
