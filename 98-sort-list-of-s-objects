@@ -12,7 +12,7 @@ public List<Account> getAccounts(List<Account> accounts) {
         accounts[i] = accWrapperList[i].accW;
     }
     
-    return accounts
+    return accounts;
 }
 
 // write extra class here 
