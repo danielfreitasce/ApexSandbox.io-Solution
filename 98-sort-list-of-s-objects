@@ -9,7 +9,7 @@ public List<Account> getAccounts(List<Account> accounts) {
     accWrapperList.sort(); 
     
     for(Integer i = 0; i < accWrapperList.size(); i++){
-        accounts[i] = accWrapperList[i];
+        accounts[i] = accWrapperList[i].accW;
     }
     
     return accounts
