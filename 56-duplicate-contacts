@@ -4,7 +4,7 @@ public Boolean duplicateContacts(Contact c1, Contact c2) {
        if(c1.Phone == c2.Phone) return true; 
    }
 
-   if(String.isNotblank(c1.Phone) && String.isNotblank(c2.Phone)){
+   if(String.isNotblank(c1.Email) && String.isNotblank(c2.Email)){
        if(c1.Email == c2.Email) return true; 
    }
 
