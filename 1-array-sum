@@ -3,7 +3,7 @@ public static Integer arraySum(List<Integer> numbers) {
     integer sum = 0;
 
     for(Integer n : numbers){
-        sum += m;
+        sum += n;
     }
     return sum;
 }
