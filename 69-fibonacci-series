@@ -2,8 +2,13 @@ public List<Integer> fibonacciSeries(Integer n) {
     
     List<Integer> fibbList = new List<Integer>{1,1}; 
 
-    if(n == 1 || n == 2) return fibbList;
-    
+    if(n == 1) {
+         return new List<Integer>{1};
+    }
+    else if(n == 2){
+         return fibbList; 
+    }
+
     Integer currentValue = 1; 
     Integer lastValue = 1; 
     Integer num = 0;
