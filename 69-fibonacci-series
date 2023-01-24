@@ -1,0 +1,21 @@
+public List<Integer> fibonacciSeries(Integer n) {
+    
+    List<Integer> fibbList = new List<Integer>{1,1}; 
+
+    if(n == 1 || n == 2) return fibbList;
+    
+    Integer currentValue = 1; 
+    Integer lastValue = 1; 
+    Integer num = 0;
+
+    for(Integer i = 3; i <= n; i++) {
+        
+        num = currentValue + lastValue; 
+        lastValue = currentValue;
+        currentValue = num; 
+
+        fibbList.add(num);
+
+    }
+    return fibbList; 
+}
