@@ -12,7 +12,7 @@ public boolean isSorted(List<Integer> numbers) {
         if(numbers[i+1] == numbers[i]) continue; 
 
         if(numbers[i+1] > numbers[i]) isDes = false;
-        if(numbers[i+i] < numbers[i]) isAcs = false; 
+        if(numbers[i+1] < numbers[i]) isAcs = false; 
 
         if(!isAcs && !isDes) break; 
     }
