@@ -2,7 +2,7 @@ public boolean isSorted(List<Integer> numbers) {
     
     if(numbers?.isEmpty()) return true; 
     
-    Ingeter listSize = numbers.size(); 
+    Integer listSize = numbers.size(); 
     if(listSize < 3) return true;
 
     boolean isAcs = false;
