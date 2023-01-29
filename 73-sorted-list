@@ -1,0 +1,21 @@
+public boolean isSorted(List<Integer> numbers) {
+    
+    if(numbers?.isEmpty()) return true; 
+    
+    Ingeter listSize = numbers.size(); 
+    if(listSize < 3) return true;
+
+    boolean isAcs = false;
+    boolean isDes = false;
+    for(Integer i = 0; i < listSize - 1; i++){
+
+        if(numbers[i+1] == numbers[i]) continue; 
+
+        if(numbers[i+1] > numbers[i]) isAcs = true;
+        else if(numbers[i+i] < numbers[i]) isDes = true; 
+
+        if(!isAcs && !isDes) break; 
+    }
+
+    retur (isAcs || isDes); 
+}
