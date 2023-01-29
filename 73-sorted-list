@@ -5,14 +5,14 @@ public boolean isSorted(List<Integer> numbers) {
     Integer listSize = numbers.size(); 
     if(listSize < 3) return true;
 
-    boolean isAcs = false;
-    boolean isDes = false;
+    boolean isAcs = true;
+    boolean isDes = true;
     for(Integer i = 0; i < listSize - 1; i++){
 
         if(numbers[i+1] == numbers[i]) continue; 
 
-        if(numbers[i+1] > numbers[i]) isAcs = true;
-        else if(numbers[i+i] < numbers[i]) isDes = true; 
+        if(numbers[i+1] > numbers[i]) isDes = false;
+        if(numbers[i+i] < numbers[i]) isAcs = false; 
 
         if(!isAcs && !isDes) break; 
     }
