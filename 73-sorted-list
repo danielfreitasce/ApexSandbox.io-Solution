@@ -17,5 +17,5 @@ public boolean isSorted(List<Integer> numbers) {
         if(!isAcs && !isDes) break; 
     }
 
-    retur (isAcs || isDes); 
+    return (isAcs || isDes); 
 }
