@@ -14,6 +14,10 @@ public Integer secondLargest(List<Integer> numbers) {
             s = numbers[i];
         }
     }
-
+    if(s > f){
+        Integer aux = s; 
+        s = f;
+        f = aux; 
+    }
     return s;
 }
