@@ -10,14 +10,10 @@ public Integer secondLargest(List<Integer> numbers) {
             s = f; 
             f = numbers[i];
         }
-        else if(numbers[i] > s){
+        else if(numbers[i] > s && numbers[i] < f){
             s = numbers[i];
         }
     }
-    if(s > f){
-        Integer aux = s; 
-        s = f;
-        f = aux; 
-    }
+ 
     return s;
 }
