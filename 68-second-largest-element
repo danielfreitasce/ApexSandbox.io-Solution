@@ -13,8 +13,7 @@ public Integer secondLargest(List<Integer> numbers) {
         else if(numbers[i] > s){
             s = numbers[i];
         }
-           
-        
-
     }
+
+    return s;
 }
